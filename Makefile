@@ -19,7 +19,7 @@ mains: $(OBJECTS_MAIN) mymaths
 maind: $(OBJECTS_MAIN) mymathd
 	gcc -Wall -g -o maind main.o ./libmyMath.so
 main.o: main.c myMath.h
-	$(CC) -c main.c
+	$(CC) $(FLAGS) -c main.c
 power.o: power.c myMath.h
 	$(CC) $(FLAGS) -c power.c
 basicMath.o: basicMath.c myMath.h
